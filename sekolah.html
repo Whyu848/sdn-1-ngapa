@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SD NEGERI 1 NGAPA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --accent: #3498db;
+      --light: #f4f4f4;
+      --text: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      color: var(--text);
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    nav {
+      background-color: white;
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    nav button:hover {
+      color: var(--accent);
+      transform: scale(1.1);
+    }
+
+    nav i {
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .section {
+      display: none;
+      padding: 2rem 1rem;
+      animation: fade 0.4s ease-in-out;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    @keyframes fade {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ecf0f1;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    .profil-img {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .profil-img-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    }
+
+    .profil-img {
+    width: 48%;
+    max-width: none;
+    }
+
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>SD NEGERI 1 NGAPA</h1>
+    <p>Mencerdaskan Anak Bangsa dengan Cinta dan Ilmu</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('beranda')">
+      <i class="fas fa-home"></i> Beranda
+    </button>
+    <button onclick="showSection('profil')">
+      <i class="fas fa-school"></i> Profil
+    </button>
+    <button onclick="showSection('Informasi')">
+      <i class="fas fa-users"></i> Informasi
+    </button>
+    <button onclick="showSection('kontak')">
+      <i class="fas fa-envelope"></i> Kontak
+    </button>
+  </nav>
+
+  <section id="beranda" class="section active">
+     <h2><div style="text-align: center; font-size: 48px;">Selamat Datang di SD Negeri 1 Ngapa</div></h2>
+    <div class="profil-img-wrapper">
+      <img src="image/sekolah.jpg" alt="Foto Gerbang SD Negeri 1 Ngapa" class="profil-img">
+    </div>
+    <div class="card">
+      <p>SD Negeri 1 Ngapa adalah tempat terbaik untuk pendidikan dasar anak-anak Anda. Dengan lingkungan yang mendukung, guru profesional, dan visi untuk membentuk generasi cerdas serta berakhlak mulia.</p>
+    </div>
+  </section>
+
+  <section id="profil" class="section">
+    <h2>Profil Sekolah</h2>
+    <div class="profil-img-wrapper">
+      <img src="image/Dokumentasi 3.jpg" alt="" class="profil-img">
+      <img src="image/Dokumentasi 2.jpg" alt="" class="profil-img">
+      <img src="image/Dokumentasi.jpg" alt="" class="profil-img">
+      <img src="image/Proses Belajar.jpg" alt="" class="profil-img">
+    </div>
+
+    <div class="card">
+      <p><strong>Nama :</strong> SD Negeri 1 Ngapa</p>
+      <p><strong>Alamat :</strong> Jl. Poros Kolaka Pomalaa, NGAPA, Kec. Wundulako, Kab. Kolaka, Sulawesi Tenggara</p>
+      <p><strong>Akreditasi :</strong> B dengan Kurikulum K13/KUMER</p>
+    </div>
+
+     <div class="card">
+  <p><strong>Visi:</strong> Membina akhlak meraih prestasi dan wawasan global yang dilandasi dengan nilai-nilai budaya sesuai ajaran agama.</p>
+
+  <p><strong>Misi:</strong></p>
+  <ol>
+    <li>Melalui pengalaman ajaran agama</li>
+    <li>Mengoptimalkan proses pembelajaran</li>
+    <li>Mengembangkan pengetahuan di bidang IPTEK, Bahasa, Olahraga, dan Seni Budaya</li>
+    <li>Menjalin kerjasama yang harmonis antar warga sekolah dan lingkungan</li>
+  </ol>
+</div>
+  </section>
+
+  <section id="Informasi" class="section">
+    <h2>Kepala Sekolah</h2>
+<div class="card">
+  <img src="image/Kepala Sekolah.jpg" alt="Foto Kepala Sekolah" class="profil-img">
+  <div class="nama-kepsek">
+    <h3>IMAWAATI,SPd</h3>
+    <p>Kepala Sekolah SD Negeri 1 Ngapa</p>
+  </div>
+</div>
+
+
+    <h2>Data Guru & Siswa</h2>
+    <div class="card">
+      
+      <h3>Guru</h3>
+      <ul>
+        <li>Guru Kelas 1 - IRMAWATI K, S.Pd</li>
+        <li>Guru Kelas 2 - SURIANTY, S.Pd</li>
+        <li>Guru Kelas 3 - JAYANTI DJINAR, S.Pd</li>
+        <li>Guru Kelas 4 - KARTINA, S.Pd.SD</li>
+        <li>Guru Kelas 5 - ROSMAH, S.Pd</li>
+        <li>Guru Kelas 6 - NURJANNA, S.Pd</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Jumlah Siswa</h3>
+      <p>Total siswa saat ini: <strong>118</strong></p>
+    </div>
+  </section>
+
+  <section id="kontak" class="section">
+    <h2>Kontak Kami</h2>
+    <div class="card">
+      <p><strong>Email :</strong> sdnegeri1ngapa@email.com</p>
+      <p><strong>Telepon :</strong> +6281234567890</p>
+      <p><strong>Alamat :</strong> Jl. Poros Kolaka Pomalaa, NGAPA, Kec. Wundulako, Kab. Kolaka, Sulawesi Tenggara</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SD Negeri 1 Ngapa. All rights reserved.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
